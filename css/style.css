@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+div[class^="item"] {
+  color:#fff;
+  padding: 20px;
+  font-family: "Abel", sans-serif;
+  font-size: 6em;
+  vertical-align: middle;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-template-rows: 11.4em 14.6em 14.6em;
+  grid-template-columns: repeat(10,8%);
+  grid-row-gap: .1em;
+  grid-column-gap: .1em;
+  grid-template-areas:
+  "A A A A A A A A A A A A A A"
+  "B B B C C C D D D H H H H H"
+  "E E E F F F G G G H H H H H";
+  margin: 0 auto;
+  width: 83.4%;
+}
+
+.item1 {
+  background: #F7EA00;
+  grid-area: A;
+}
+
+.item2 {
+  background: #5EC9EA;
+  grid-area: B;
+}
+
+.item3 {
+  background: #E836B1;
+  grid-area: C;
+}
+
+.item4 {
+  background: #F7B93C;
+  grid-area: D;
+}
+
+.item5 {
+  background: #ED5A5A;
+  grid-area: E;
+}
+
+.item6 {
+  background: #41EFB9;
+  grid-area: F;
+}
+
+.item7 {
+  background: #92E542;
+  grid-area: G;
+}
+
+.item8 {
+  background: #E486EA;
+  grid-area: H;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    grid-template-rows: 7em 8em 8em 8em;
+    grid-template-areas:
+    "A A A A A A A A A A A A"
+    "B B B B C C C C D D D D"
+    "E E E E F F F F G G G G"
+    "H H H H H H H H H H H H";
+    width: 100%;
+  }
+  div[class^="item"] {
+    font-size: 3em;
+  }
+}
